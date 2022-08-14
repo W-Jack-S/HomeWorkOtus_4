@@ -3,16 +3,15 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static io.opentelemetry.sdk.trace.IdGenerator.random;
+import static java.lang.Thread.sleep;
 import static org.apache.commons.lang3.RandomUtils.nextInt;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.openqa.selenium.By.xpath;
@@ -21,6 +20,7 @@ public class Test_1 extends WebDriverInit{
 
     @Test
     public void test1(){
+
         //Открыть Chrome в headless режиме
         chrome("headless");
         //Перейти на https://duckduckgo.com/
@@ -39,25 +39,46 @@ public class Test_1 extends WebDriverInit{
     }
 
     @Test
-    public void test2(){
+    public void test2() throws InterruptedException {
+        //Открыть Chrome...
         chrome();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        //Перейти на https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818
         driver.get("https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818");
-       // driver.manage().window().fullscreen();
-        //driver.findElement(xpath("//*[@id='search_form_input_homepage']")).sendKeys("ОТУС");
+        //...в режиме киоска
+        driver.manage().window().fullscreen();
+        //Нажать на любую картинку(для выбора картинки "любой" подключаем рандомайзер)
+        //Для начала находим все картинки
         List<WebElement> photos = driver.findElements(By.xpath("//li[@class='portfolio-item2 content']"));
+        //Посчитаем их
         int quantityPhotos = photos.size();
+        //Подключаем рандомайзер
         Random random = new Random();
+        //задаем рандомайзер на значения от "0" до максимального количества картинок
         int n = random.nextInt(quantityPhotos);
-        Actions moving = new Actions(driver);
-        moving.moveToElement(driver.findElement(xpath("//li[" + n + "][@class='portfolio-item2 content']/span/a/div[1]"))).build().perform();
-       driver.findElement(xpath("//li[" + n + "][@class='portfolio-item2 content']/span/a/div[1]")).click();
-       // String position = "//article[@id='r1-0']";
-       // String expectedText = "Онлайн‑курсы для профессионалов, дистанционное обучение современным ...";
-       // By element = xpath( position + "//span[text()='" + expectedText + "']");
-       // assertTrue(checkElement(element)); v/html/body/section[2]/div/ul[2]/li[2]/span/a/div[1]
-
+        //картинки под номером "0" нет, потому 0 рандомайзера меняем на 1
+        if(n==0)n=1;
+        //БЕЗ ПРОКРУТКИ СТРАНИЦЫ, КАРТИНКИ НАХОДЯЩИЕСЯ ЗА ПРЕДЕЛОМ ЭКРАНА НЕ КЛИКАБЕЛЬНЫ!!!
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        if(n>3){
+            //в зависимости от "глубины" картинки определяем "глубину" прокрутки
+            js.executeScript("scroll(0, 1000);");
+            if(n>6)js.executeScript("scroll(0, 1300);");
+        }
+        //Без принудительной паузы может выдать ошибку о том что элемент не кликабелен
+        Thread.sleep(1000);
+        ////Нажать на любую картинку(выбранную выше рандомайзером)
+        driver.findElement(xpath("//li[" + n + "][@class='portfolio-item2 content']//div[1]")).click();
+        //Проверить что картинка открылась в модальном окне
+        assertTrue(checkElement(xpath("//img[@id='fullResImage']")));
     }
 
+    @Test
+    public void test3(){
+        chrome();
+        driver.manage().window().maximize();
+        driver.get("https://otus.ru");
+    }
 
     //@AfterEach
     public void exit(){
