@@ -77,7 +77,7 @@ public class Tests extends WebDriverInit{
         driver.findElement(xpath("//button")).click();
         driver.findElement(xpath("//form[@action='/login/']//input[@name='email']")).sendKeys("test10.jack@yandex.ru");
         driver.findElement(xpath("//form[@action='/login/']//input[@name='password']")).sendKeys("Qwerty1234$");
-        driver.findElement(xpath("//button[@type='submit']"));
+        driver.findElement(xpath("//form[@action='/login/']//button[@type='submit']")).click();
         //Вывести в лог все cookie
         logger = LogManager.getLogger(WebDriverInit.class);
         logger.info(driver.manage().getCookies());
