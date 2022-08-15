@@ -17,7 +17,7 @@ import java.util.logging.LogManager;
 
 public class WebDriverInit {
     public WebDriver driver;
-   // public org.apache.logging.log4j.Logger logger = LogManager.getLogger(Logger.class);
+   public Logger logger;
 
 
     //ИНИЦИАЛИЗАЦИЯ БРАУЗЕРА
@@ -35,7 +35,7 @@ public class WebDriverInit {
         driver = new ChromeDriver();
         waiting();
     }
-    public void chrome(){
+     public void chrome(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         waiting();

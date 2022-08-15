@@ -1,26 +1,20 @@
-import dev.failsafe.internal.util.Assert;
+import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
-import static io.opentelemetry.sdk.trace.IdGenerator.random;
 import static java.lang.Thread.sleep;
 import static org.apache.commons.lang3.RandomUtils.nextInt;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.openqa.selenium.By.xpath;
 
-public class Test_1 extends WebDriverInit{
+public class Tests extends WebDriverInit{
 
     @Test
     public void test1(){
-
         //Открыть Chrome в headless режиме
         chrome("headless");
         //Перейти на https://duckduckgo.com/
@@ -74,18 +68,22 @@ public class Test_1 extends WebDriverInit{
 
     @Test
     public void test3() throws InterruptedException {
+        //Открыть Chrome в режиме полного экрана
         chrome();
         driver.manage().window().maximize();
+        //ерейти на https://otus.ru
         driver.get("https://otus.ru");
+        //Авторизоваться под каким-нибудь тестовым пользователем
         driver.findElement(xpath("//button")).click();
-        Thread.sleep(5000);
-        driver.findElement(xpath("//input[@name='email']"));
-        driver.findElement(xpath("//input[@name='email']")).sendKeys("test10.jack@yandex.ru");
-        //driver.findElement(xpath("//input[@type='password']")).sendKeys("Qwerty1234$");
-    //    logger.info();
+       //driver.findElement(xpath("//input[@name='email']")).sendKeys("test10.jack@yandex.ru"); //выдает ошибку, что данный инпут не интерактивный объект
+       // driver.findElement(xpath("//input[@type='password']")).sendKeys("Qwerty1234$"); //выдает ошибку, что данный инпут не интерактивный объект
+        driver.findElement(xpath("//button[@type='submit']"));
+        //Вывести в лог все cookie
+        logger = LogManager.getLogger(WebDriverInit.class);
+        logger.info(driver.manage().getCookies());
     }
 
-    //@AfterEach
+    @AfterEach
     public void exit(){
         if(driver != null) driver.quit();
     }
