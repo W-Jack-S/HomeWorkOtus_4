@@ -75,8 +75,8 @@ public class Tests extends WebDriverInit{
         driver.get("https://otus.ru");
         //Авторизоваться под каким-нибудь тестовым пользователем
         driver.findElement(xpath("//button")).click();
-       //driver.findElement(xpath("//input[@name='email']")).sendKeys("test10.jack@yandex.ru"); //выдает ошибку, что данный инпут не интерактивный объект
-       // driver.findElement(xpath("//input[@type='password']")).sendKeys("Qwerty1234$"); //выдает ошибку, что данный инпут не интерактивный объект
+        driver.findElement(xpath("//form[@action='/login/']//input[@name='email']")).sendKeys("test10.jack@yandex.ru");
+        driver.findElement(xpath("//form[@action='/login/']//input[@name='password']")).sendKeys("Qwerty1234$");
         driver.findElement(xpath("//button[@type='submit']"));
         //Вывести в лог все cookie
         logger = LogManager.getLogger(WebDriverInit.class);
