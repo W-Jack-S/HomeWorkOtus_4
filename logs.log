@@ -1,0 +1,867 @@
+2022-08-15 16:17:51,432 DEBUG i.n.u.i.l.InternalLoggerFactory [main] Using Log4J2 as the default logging framework
+2022-08-15 16:17:51,436 DEBUG i.n.u.ResourceLeakDetector [main] -Dio.netty.leakDetection.level: simple
+2022-08-15 16:17:51,436 DEBUG i.n.u.ResourceLeakDetector [main] -Dio.netty.leakDetection.targetRecords: 4
+2022-08-15 16:17:51,438 DEBUG i.n.u.ResourceLeakDetectorFactory [main] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5b6e8f77
+2022-08-15 16:17:51,447 DEBUG i.n.u.i.PlatformDependent0 [main] -Dio.netty.noUnsafe: false
+2022-08-15 16:17:51,447 DEBUG i.n.u.i.PlatformDependent0 [main] Java version: 18
+2022-08-15 16:17:51,447 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.theUnsafe: available
+2022-08-15 16:17:51,448 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.copyMemory: available
+2022-08-15 16:17:51,448 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.storeFence: available
+2022-08-15 16:17:51,448 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.Buffer.address: available
+2022-08-15 16:17:51,449 DEBUG i.n.u.i.PlatformDependent0 [main] direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:287) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:281) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:93) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:134) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at WebDriverInit.chrome(WebDriverInit.java:35) ~[test-classes/:?]
+	at Tests.test1(Tests.java:19) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727) ~[junit-platform-commons-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) [junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) [idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) [junit-rt.jar:?]
+2022-08-15 16:17:51,457 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.Bits.unaligned: available, true
+2022-08-15 16:17:51,458 DEBUG i.n.u.i.PlatformDependent0 [main] jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @57829d67
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:394) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:409) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:400) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:93) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:134) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at WebDriverInit.chrome(WebDriverInit.java:35) ~[test-classes/:?]
+	at Tests.test1(Tests.java:19) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727) ~[junit-platform-commons-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) [junit-platform-launcher-1.9.0.jar:1.9.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) [junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) [idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) [junit-rt.jar:?]
+2022-08-15 16:17:51,461 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2022-08-15 16:17:51,461 DEBUG i.n.u.i.PlatformDependent [main] sun.misc.Unsafe: available
+2022-08-15 16:17:51,461 DEBUG i.n.u.i.PlatformDependent [main] maxDirectMemory: 4200595456 bytes (maybe)
+2022-08-15 16:17:51,461 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.tmpdir: C:\Users\sinss\AppData\Local\Temp (java.io.tmpdir)
+2022-08-15 16:17:51,462 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-08-15 16:17:51,462 DEBUG i.n.u.i.PlatformDependent [main] Platform: Windows
+2022-08-15 16:17:51,462 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.maxDirectMemory: -1 bytes
+2022-08-15 16:17:51,462 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-08-15 16:17:51,463 DEBUG i.n.u.i.CleanerJava9 [main] java.nio.ByteBuffer.cleaner(): available
+2022-08-15 16:17:51,463 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.noPreferDirect: false
+2022-08-15 16:17:51,467 DEBUG i.n.u.i.PlatformDependent [main] org.jctools-core.MpscChunkedArrayQueue: available
+2022-08-15 16:17:51,476 DEBUG i.n.u.i.InternalThreadLocalMap [main] -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-08-15 16:17:51,476 DEBUG i.n.u.i.InternalThreadLocalMap [main] -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-08-15 16:17:51,496 DEBUG i.n.h.s.JdkSslContext [main] Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2022-08-15 16:17:51,496 DEBUG i.n.h.s.JdkSslContext [main] Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2022-08-15 16:17:51,507 DEBUG i.n.c.MultithreadEventLoopGroup [main] -Dio.netty.eventLoopThreads: 32
+2022-08-15 16:17:51,516 DEBUG i.n.c.n.NioEventLoop [main] -Dio.netty.noKeySetOptimization: false
+2022-08-15 16:17:51,517 DEBUG i.n.c.n.NioEventLoop [main] -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-08-15 16:17:51,524 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@66ec9390
+2022-08-15 16:17:51,525 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@1a35993f
+2022-08-15 16:17:51,525 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5b12012e
+2022-08-15 16:17:51,526 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2f7dcef2
+2022-08-15 16:17:51,526 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4a3be6a5
+2022-08-15 16:17:51,526 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7cf162bc
+2022-08-15 16:17:51,527 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3721177d
+2022-08-15 16:17:51,527 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@766a4535
+2022-08-15 16:17:51,528 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@63718b93
+2022-08-15 16:17:51,528 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@14e2e1c3
+2022-08-15 16:17:51,528 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2b4786dd
+2022-08-15 16:17:51,529 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@f202d6d
+2022-08-15 16:17:51,529 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@60e21209
+2022-08-15 16:17:51,529 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@630d1b2f
+2022-08-15 16:17:51,530 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@746b18fd
+2022-08-15 16:17:51,530 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7a2e0858
+2022-08-15 16:17:51,531 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@aac3f4e
+2022-08-15 16:17:51,531 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@1f38957
+2022-08-15 16:17:51,532 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2df3c564
+2022-08-15 16:17:51,532 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2715644a
+2022-08-15 16:17:51,532 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4c2869a9
+2022-08-15 16:17:51,533 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@518cf84a
+2022-08-15 16:17:51,533 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@62e7dffa
+2022-08-15 16:17:51,534 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6edcd0d8
+2022-08-15 16:17:51,534 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6136998b
+2022-08-15 16:17:51,534 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@57ce634f
+2022-08-15 16:17:51,535 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@b8a7e43
+2022-08-15 16:17:51,535 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@35835fa
+2022-08-15 16:17:51,535 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@56f71edb
+2022-08-15 16:17:51,536 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7207cb51
+2022-08-15 16:17:51,536 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2a27cb34
+2022-08-15 16:17:51,537 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6892cc6f
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.numHeapArenas: 32
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.numDirectArenas: 32
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.pageSize: 8192
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxOrder: 9
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.chunkSize: 4194304
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.smallCacheSize: 256
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.normalCacheSize: 64
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-08-15 16:17:51,547 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.useCacheForAllThreads: false
+2022-08-15 16:17:51,548 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-08-15 16:17:51,553 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.allocator.type: pooled
+2022-08-15 16:17:51,553 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.threadLocalDirectBufferSize: 0
+2022-08-15 16:17:51,554 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-08-15 16:17:51,744 DEBUG i.n.c.DefaultChannelId [Forwarding newSession on session null to remote] -Dio.netty.processId: 14776 (auto-detected)
+2022-08-15 16:17:51,745 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] -Djava.net.preferIPv4Stack: false
+2022-08-15 16:17:51,745 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] -Djava.net.preferIPv6Addresses: false
+2022-08-15 16:17:51,752 DEBUG i.n.u.NetUtilInitializations [Forwarding newSession on session null to remote] Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-08-15 16:17:51,752 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-08-15 16:17:51,772 DEBUG i.n.c.DefaultChannelId [Forwarding newSession on session null to remote] -Dio.netty.machineId: 4c:77:cb:ff:fe:9d:67:c8 (auto-detected)
+2022-08-15 16:17:51,795 DEBUG i.n.b.AbstractByteBuf [AsyncHttpClient-1-2] -Dio.netty.buffer.checkAccessible: true
+2022-08-15 16:17:51,796 DEBUG i.n.b.AbstractByteBuf [AsyncHttpClient-1-2] -Dio.netty.buffer.checkBounds: true
+2022-08-15 16:17:51,796 DEBUG i.n.u.ResourceLeakDetectorFactory [AsyncHttpClient-1-2] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6c136491
+2022-08-15 16:17:51,807 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-08-15 16:17:51,807 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.ratio: 8
+2022-08-15 16:17:51,807 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.chunkSize: 32
+2022-08-15 16:17:51,807 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.blocking: false
+2022-08-15 16:17:52,281 DEBUG i.n.h.c.c.Brotli [AsyncHttpClient-1-2] brotli4j not in the classpath; Brotli support will be unavailable.
+2022-08-15 16:17:52,336 DEBUG i.n.u.i.ThreadLocalRandom [main] -Dio.netty.initialSeedUniquifier: 0x16b9d6553b872892
+2022-08-15 16:17:54,540 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-4] Encoding WebSocket Frame opCode=8 length=26
+2022-08-15 16:17:58,390 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-7] Encoding WebSocket Frame opCode=8 length=26
+2022-08-15 16:18:03,198 INFO WebDriverInit [main] [advcake_track_id=985509a1-e6cd-d18f-7e68-13f4ca5715df; expires=ср, 14 сент. 2022 04:18:02 MSK; path=/; domain=.otus.ru, oid=829b305e140020d40bde21491480fa76; expires=вт, 19 сент. 2023 04:18:01 MSK; path=/; domain=.otus.ru, sessionid=8l33erslh2efertba14aa4m6r88st209; expires=вс, 13 нояб. 2022 04:18:01 MSK; path=/; domain=otus.ru; sameSite=Lax, _ym_d=1660569482; expires=вт, 15 авг. 2023 04:18:02 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _tt_enable_cookie=1; expires=сб, 09 сент. 2023 04:18:02 MSK; path=/; domain=.otus.ru, _ym_visorc=w; expires=пн, 15 авг. 2022 04:48:02 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _gid=GA1.2.2074971514.1660569482; expires=вт, 16 авг. 2022 04:18:02 MSK; path=/; domain=.otus.ru, utm=utm_source%3Dtypein%26utm_medium%3Ddirect%26utm_campaign%3DNone; expires=вт, 19 сент. 2023 04:18:01 MSK; path=/; domain=.otus.ru, _ym_uid=16605694824959307; expires=вт, 15 авг. 2023 04:18:02 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _gat=1; expires=пн, 15 авг. 2022 04:19:02 MSK; path=/; domain=.otus.ru, _ym_isad=2; expires=вт, 16 авг. 2022 12:18:02 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _ga=GA1.2.590543850.1660569482; expires=вт, 19 сент. 2023 04:18:02 MSK; path=/; domain=.otus.ru, _ttp=2c97d936-9aa2-464a-8126-ed2436498dbc; expires=сб, 09 сент. 2023 04:18:02 MSK; path=/; domain=.otus.ru, advcake_session_id=125cc99a-b411-0572-3abf-965e25742f88; expires=ср, 14 сент. 2022 04:18:02 MSK; path=/; domain=.otus.ru]
+2022-08-15 16:18:03,199 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-10] Encoding WebSocket Frame opCode=8 length=26
+2022-08-15 16:19:55,728 DEBUG i.n.u.i.l.InternalLoggerFactory [main] Using Log4J2 as the default logging framework
+2022-08-15 16:19:55,732 DEBUG i.n.u.ResourceLeakDetector [main] -Dio.netty.leakDetection.level: simple
+2022-08-15 16:19:55,733 DEBUG i.n.u.ResourceLeakDetector [main] -Dio.netty.leakDetection.targetRecords: 4
+2022-08-15 16:19:55,735 DEBUG i.n.u.ResourceLeakDetectorFactory [main] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2caf6912
+2022-08-15 16:19:55,743 DEBUG i.n.u.i.PlatformDependent0 [main] -Dio.netty.noUnsafe: false
+2022-08-15 16:19:55,743 DEBUG i.n.u.i.PlatformDependent0 [main] Java version: 18
+2022-08-15 16:19:55,744 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.theUnsafe: available
+2022-08-15 16:19:55,744 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.copyMemory: available
+2022-08-15 16:19:55,745 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.storeFence: available
+2022-08-15 16:19:55,745 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.Buffer.address: available
+2022-08-15 16:19:55,745 DEBUG i.n.u.i.PlatformDependent0 [main] direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:287) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:281) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:93) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:134) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at WebDriverInit.chrome(WebDriverInit.java:35) ~[test-classes/:?]
+	at Tests.test1(Tests.java:19) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727) ~[junit-platform-commons-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-15 16:19:55,753 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.Bits.unaligned: available, true
+2022-08-15 16:19:55,754 DEBUG i.n.u.i.PlatformDependent0 [main] jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @57829d67
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:394) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:409) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:400) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:93) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:134) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at WebDriverInit.chrome(WebDriverInit.java:35) ~[test-classes/:?]
+	at Tests.test1(Tests.java:19) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727) ~[junit-platform-commons-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-15 16:19:55,756 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2022-08-15 16:19:55,756 DEBUG i.n.u.i.PlatformDependent [main] sun.misc.Unsafe: available
+2022-08-15 16:19:55,757 DEBUG i.n.u.i.PlatformDependent [main] maxDirectMemory: 4200595456 bytes (maybe)
+2022-08-15 16:19:55,757 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.tmpdir: C:\Users\sinss\AppData\Local\Temp (java.io.tmpdir)
+2022-08-15 16:19:55,757 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-08-15 16:19:55,757 DEBUG i.n.u.i.PlatformDependent [main] Platform: Windows
+2022-08-15 16:19:55,757 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.maxDirectMemory: -1 bytes
+2022-08-15 16:19:55,758 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-08-15 16:19:55,758 DEBUG i.n.u.i.CleanerJava9 [main] java.nio.ByteBuffer.cleaner(): available
+2022-08-15 16:19:55,759 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.noPreferDirect: false
+2022-08-15 16:19:55,762 DEBUG i.n.u.i.PlatformDependent [main] org.jctools-core.MpscChunkedArrayQueue: available
+2022-08-15 16:19:55,771 DEBUG i.n.u.i.InternalThreadLocalMap [main] -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-08-15 16:19:55,771 DEBUG i.n.u.i.InternalThreadLocalMap [main] -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-08-15 16:19:55,794 DEBUG i.n.h.s.JdkSslContext [main] Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2022-08-15 16:19:55,795 DEBUG i.n.h.s.JdkSslContext [main] Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2022-08-15 16:19:55,811 DEBUG i.n.c.MultithreadEventLoopGroup [main] -Dio.netty.eventLoopThreads: 32
+2022-08-15 16:19:55,816 DEBUG i.n.c.n.NioEventLoop [main] -Dio.netty.noKeySetOptimization: false
+2022-08-15 16:19:55,816 DEBUG i.n.c.n.NioEventLoop [main] -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-08-15 16:19:55,822 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@ae7950d
+2022-08-15 16:19:55,822 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@f339eae
+2022-08-15 16:19:55,823 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2822c6ff
+2022-08-15 16:19:55,823 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4dafba3e
+2022-08-15 16:19:55,824 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@53e3a87a
+2022-08-15 16:19:55,824 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@40368a46
+2022-08-15 16:19:55,824 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7e9da981
+2022-08-15 16:19:55,825 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4ed38226
+2022-08-15 16:19:55,825 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3d43fe
+2022-08-15 16:19:55,826 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@74ad8d05
+2022-08-15 16:19:55,826 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@676ff3b0
+2022-08-15 16:19:55,826 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@35ff8fc9
+2022-08-15 16:19:55,827 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5fb7183b
+2022-08-15 16:19:55,827 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@476a736d
+2022-08-15 16:19:55,827 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5f80fa43
+2022-08-15 16:19:55,828 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@16c8b7bd
+2022-08-15 16:19:55,828 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7159139f
+2022-08-15 16:19:55,829 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@65bcf7c2
+2022-08-15 16:19:55,829 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3db64bd4
+2022-08-15 16:19:55,829 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6e106680
+2022-08-15 16:19:55,830 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@576c5536
+2022-08-15 16:19:55,830 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@55ecbafe
+2022-08-15 16:19:55,831 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5a8ba37c
+2022-08-15 16:19:55,831 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@37c2eacb
+2022-08-15 16:19:55,831 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@232cce0
+2022-08-15 16:19:55,832 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@32b9bd12
+2022-08-15 16:19:55,832 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@352e787a
+2022-08-15 16:19:55,833 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@159a48a6
+2022-08-15 16:19:55,833 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@15bc339
+2022-08-15 16:19:55,833 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7e75bf2d
+2022-08-15 16:19:55,834 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@385ef531
+2022-08-15 16:19:55,834 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7fc645e4
+2022-08-15 16:19:55,844 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.numHeapArenas: 32
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.numDirectArenas: 32
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.pageSize: 8192
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxOrder: 9
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.chunkSize: 4194304
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.smallCacheSize: 256
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.normalCacheSize: 64
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.useCacheForAllThreads: false
+2022-08-15 16:19:55,845 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-08-15 16:19:55,851 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.allocator.type: pooled
+2022-08-15 16:19:55,851 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.threadLocalDirectBufferSize: 0
+2022-08-15 16:19:55,851 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-08-15 16:19:56,030 DEBUG i.n.c.DefaultChannelId [Forwarding newSession on session null to remote] -Dio.netty.processId: 18564 (auto-detected)
+2022-08-15 16:19:56,031 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] -Djava.net.preferIPv4Stack: false
+2022-08-15 16:19:56,031 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] -Djava.net.preferIPv6Addresses: false
+2022-08-15 16:19:56,038 DEBUG i.n.u.NetUtilInitializations [Forwarding newSession on session null to remote] Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-08-15 16:19:56,039 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-08-15 16:19:56,058 DEBUG i.n.c.DefaultChannelId [Forwarding newSession on session null to remote] -Dio.netty.machineId: 4c:77:cb:ff:fe:9d:67:c8 (auto-detected)
+2022-08-15 16:19:56,083 DEBUG i.n.b.AbstractByteBuf [AsyncHttpClient-1-2] -Dio.netty.buffer.checkAccessible: true
+2022-08-15 16:19:56,084 DEBUG i.n.b.AbstractByteBuf [AsyncHttpClient-1-2] -Dio.netty.buffer.checkBounds: true
+2022-08-15 16:19:56,084 DEBUG i.n.u.ResourceLeakDetectorFactory [AsyncHttpClient-1-2] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4493e165
+2022-08-15 16:19:56,096 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-08-15 16:19:56,096 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.ratio: 8
+2022-08-15 16:19:56,096 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.chunkSize: 32
+2022-08-15 16:19:56,096 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.blocking: false
+2022-08-15 16:19:56,573 DEBUG i.n.h.c.c.Brotli [AsyncHttpClient-1-2] brotli4j not in the classpath; Brotli support will be unavailable.
+2022-08-15 16:19:56,627 DEBUG i.n.u.i.ThreadLocalRandom [main] -Dio.netty.initialSeedUniquifier: 0x0c56d0f4cf13350f
+2022-08-15 16:19:59,070 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-4] Encoding WebSocket Frame opCode=8 length=26
+2022-08-15 16:20:02,629 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-7] Encoding WebSocket Frame opCode=8 length=26
+2022-08-15 16:20:08,545 INFO WebDriverInit [main] [advcake_track_id=dc9da935-3214-fc07-b5e0-3bf6886b5f91; expires=ср, 14 сент. 2022 04:20:05 MSK; path=/; domain=.otus.ru, oid=b33bca9c0a4bb4ae51ac28b6f3833007; expires=вт, 19 сент. 2023 04:20:04 MSK; path=/; domain=.otus.ru, sessionid=0qzodqql76i5j4u8gntqfv3pc18jpprs; expires=вс, 13 нояб. 2022 04:20:04 MSK; path=/; domain=otus.ru; sameSite=Lax, _ym_d=1660569606; expires=вт, 15 авг. 2023 04:20:06 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _tt_enable_cookie=1; expires=сб, 09 сент. 2023 04:20:06 MSK; path=/; domain=.otus.ru, _ym_visorc=w; expires=пн, 15 авг. 2022 04:50:07 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _gid=GA1.2.328711167.1660569606; expires=вт, 16 авг. 2022 04:20:06 MSK; path=/; domain=.otus.ru, utm=utm_source%3Dtypein%26utm_medium%3Ddirect%26utm_campaign%3DNone; expires=вт, 19 сент. 2023 04:20:04 MSK; path=/; domain=.otus.ru, _ym_uid=1660569606563263; expires=вт, 15 авг. 2023 04:20:06 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _gat=1; expires=пн, 15 авг. 2022 04:21:06 MSK; path=/; domain=.otus.ru, _ym_isad=2; expires=вт, 16 авг. 2022 12:20:07 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _ga=GA1.2.1489024165.1660569606; expires=вт, 19 сент. 2023 04:20:06 MSK; path=/; domain=.otus.ru, _ttp=7a52b4e0-2c4d-4170-8c22-af70ebefdcd8; expires=сб, 09 сент. 2023 04:20:06 MSK; path=/; domain=.otus.ru, advcake_session_id=be67e991-7546-4ffb-9727-105b68eef105; expires=ср, 14 сент. 2022 04:20:05 MSK; path=/; domain=.otus.ru]
+2022-08-15 16:20:08,546 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-10] Encoding WebSocket Frame opCode=8 length=26
+2022-08-15 16:25:19,859 DEBUG i.n.u.i.l.InternalLoggerFactory [main] Using Log4J2 as the default logging framework
+2022-08-15 16:25:19,864 DEBUG i.n.u.ResourceLeakDetector [main] -Dio.netty.leakDetection.level: simple
+2022-08-15 16:25:19,864 DEBUG i.n.u.ResourceLeakDetector [main] -Dio.netty.leakDetection.targetRecords: 4
+2022-08-15 16:25:19,866 DEBUG i.n.u.ResourceLeakDetectorFactory [main] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@726a6b94
+2022-08-15 16:25:19,876 DEBUG i.n.u.i.PlatformDependent0 [main] -Dio.netty.noUnsafe: false
+2022-08-15 16:25:19,876 DEBUG i.n.u.i.PlatformDependent0 [main] Java version: 18
+2022-08-15 16:25:19,876 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.theUnsafe: available
+2022-08-15 16:25:19,877 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.copyMemory: available
+2022-08-15 16:25:19,877 DEBUG i.n.u.i.PlatformDependent0 [main] sun.misc.Unsafe.storeFence: available
+2022-08-15 16:25:19,877 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.Buffer.address: available
+2022-08-15 16:25:19,878 DEBUG i.n.u.i.PlatformDependent0 [main] direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:287) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:281) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:93) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:134) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at WebDriverInit.chrome(WebDriverInit.java:31) ~[test-classes/:?]
+	at Tests.test1(Tests.java:19) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727) ~[junit-platform-commons-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-15 16:25:19,884 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.Bits.unaligned: available, true
+2022-08-15 16:25:19,884 DEBUG i.n.u.i.PlatformDependent0 [main] jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @35f983a6
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:394) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:409) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:400) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:93) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:134) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49) ~[selenium-chrome-driver-4.3.0.jar:?]
+	at WebDriverInit.chrome(WebDriverInit.java:31) ~[test-classes/:?]
+	at Tests.test1(Tests.java:19) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:577) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727) ~[junit-platform-commons-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.0.jar:5.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.9.0.jar:1.9.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+2022-08-15 16:25:19,887 DEBUG i.n.u.i.PlatformDependent0 [main] java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2022-08-15 16:25:19,887 DEBUG i.n.u.i.PlatformDependent [main] sun.misc.Unsafe: available
+2022-08-15 16:25:19,888 DEBUG i.n.u.i.PlatformDependent [main] maxDirectMemory: 4200595456 bytes (maybe)
+2022-08-15 16:25:19,888 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.tmpdir: C:\Users\sinss\AppData\Local\Temp (java.io.tmpdir)
+2022-08-15 16:25:19,888 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-08-15 16:25:19,888 DEBUG i.n.u.i.PlatformDependent [main] Platform: Windows
+2022-08-15 16:25:19,888 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.maxDirectMemory: -1 bytes
+2022-08-15 16:25:19,889 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-08-15 16:25:19,889 DEBUG i.n.u.i.CleanerJava9 [main] java.nio.ByteBuffer.cleaner(): available
+2022-08-15 16:25:19,890 DEBUG i.n.u.i.PlatformDependent [main] -Dio.netty.noPreferDirect: false
+2022-08-15 16:25:19,894 DEBUG i.n.u.i.PlatformDependent [main] org.jctools-core.MpscChunkedArrayQueue: available
+2022-08-15 16:25:19,904 DEBUG i.n.u.i.InternalThreadLocalMap [main] -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-08-15 16:25:19,904 DEBUG i.n.u.i.InternalThreadLocalMap [main] -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-08-15 16:25:19,938 DEBUG i.n.h.s.JdkSslContext [main] Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2022-08-15 16:25:19,938 DEBUG i.n.h.s.JdkSslContext [main] Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2022-08-15 16:25:19,953 DEBUG i.n.c.MultithreadEventLoopGroup [main] -Dio.netty.eventLoopThreads: 32
+2022-08-15 16:25:19,959 DEBUG i.n.c.n.NioEventLoop [main] -Dio.netty.noKeySetOptimization: false
+2022-08-15 16:25:19,959 DEBUG i.n.c.n.NioEventLoop [main] -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-08-15 16:25:19,965 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@1931d99
+2022-08-15 16:25:19,966 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4a5905d9
+2022-08-15 16:25:19,966 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@1a3e5f23
+2022-08-15 16:25:19,967 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6293e39e
+2022-08-15 16:25:19,967 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@365553de
+2022-08-15 16:25:19,967 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@34a0ef00
+2022-08-15 16:25:19,968 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5c0f79f0
+2022-08-15 16:25:19,968 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@21fdfefc
+2022-08-15 16:25:19,969 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3daa82be
+2022-08-15 16:25:19,969 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@ec1b2e4
+2022-08-15 16:25:19,969 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@29a69a35
+2022-08-15 16:25:19,970 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@67e28be3
+2022-08-15 16:25:19,970 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@e344ad3
+2022-08-15 16:25:19,971 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@de18f63
+2022-08-15 16:25:19,971 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@108bdbd8
+2022-08-15 16:25:19,971 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6345e7b9
+2022-08-15 16:25:19,972 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4f8b4bd0
+2022-08-15 16:25:19,972 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4e904fd5
+2022-08-15 16:25:19,973 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@b18c4
+2022-08-15 16:25:19,973 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4cbf4f53
+2022-08-15 16:25:19,973 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@597f48df
+2022-08-15 16:25:19,974 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@15dd5ac2
+2022-08-15 16:25:19,974 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4d48bd85
+2022-08-15 16:25:19,974 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7bbbb6a8
+2022-08-15 16:25:19,975 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@58a120b0
+2022-08-15 16:25:19,975 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@27d57a2c
+2022-08-15 16:25:19,976 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2ff95fc6
+2022-08-15 16:25:19,976 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@9d1a267
+2022-08-15 16:25:19,976 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@58a4a74d
+2022-08-15 16:25:19,977 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@54aca26f
+2022-08-15 16:25:19,977 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@314ed053
+2022-08-15 16:25:19,978 TRACE i.n.c.n.NioEventLoop [main] instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@35088e87
+2022-08-15 16:25:19,988 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.numHeapArenas: 32
+2022-08-15 16:25:19,988 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.numDirectArenas: 32
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.pageSize: 8192
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxOrder: 9
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.chunkSize: 4194304
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.smallCacheSize: 256
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.normalCacheSize: 64
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.useCacheForAllThreads: false
+2022-08-15 16:25:19,989 DEBUG i.n.b.PooledByteBufAllocator [main] -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-08-15 16:25:19,995 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.allocator.type: pooled
+2022-08-15 16:25:19,995 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.threadLocalDirectBufferSize: 0
+2022-08-15 16:25:19,996 DEBUG i.n.b.ByteBufUtil [main] -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-08-15 16:25:20,169 DEBUG i.n.c.DefaultChannelId [Forwarding newSession on session null to remote] -Dio.netty.processId: 19196 (auto-detected)
+2022-08-15 16:25:20,170 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] -Djava.net.preferIPv4Stack: false
+2022-08-15 16:25:20,170 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] -Djava.net.preferIPv6Addresses: false
+2022-08-15 16:25:20,176 DEBUG i.n.u.NetUtilInitializations [Forwarding newSession on session null to remote] Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-08-15 16:25:20,177 DEBUG i.n.u.NetUtil [Forwarding newSession on session null to remote] Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-08-15 16:25:20,196 DEBUG i.n.c.DefaultChannelId [Forwarding newSession on session null to remote] -Dio.netty.machineId: 4c:77:cb:ff:fe:9d:67:c8 (auto-detected)
+2022-08-15 16:25:20,220 DEBUG i.n.b.AbstractByteBuf [AsyncHttpClient-1-2] -Dio.netty.buffer.checkAccessible: true
+2022-08-15 16:25:20,221 DEBUG i.n.b.AbstractByteBuf [AsyncHttpClient-1-2] -Dio.netty.buffer.checkBounds: true
+2022-08-15 16:25:20,221 DEBUG i.n.u.ResourceLeakDetectorFactory [AsyncHttpClient-1-2] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@9ad0147
+2022-08-15 16:25:20,232 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-08-15 16:25:20,233 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.ratio: 8
+2022-08-15 16:25:20,233 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.chunkSize: 32
+2022-08-15 16:25:20,233 DEBUG i.n.u.Recycler [AsyncHttpClient-1-2] -Dio.netty.recycler.blocking: false
+2022-08-15 16:25:20,717 DEBUG i.n.h.c.c.Brotli [AsyncHttpClient-1-2] brotli4j not in the classpath; Brotli support will be unavailable.
+2022-08-15 16:25:20,791 DEBUG i.n.u.i.ThreadLocalRandom [main] -Dio.netty.initialSeedUniquifier: 0x188828e1265fc0f9
+2022-08-15 16:25:30,501 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-4] Encoding WebSocket Frame opCode=8 length=26
+2022-08-15 16:25:34,042 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-7] Encoding WebSocket Frame opCode=8 length=26
+2022-08-15 16:25:40,682 INFO WebDriverInit [main] [advcake_track_id=4e03b033-e15c-bab3-9f4a-5a98abbe739f; expires=ср, 14 сент. 2022 04:25:38 MSK; path=/; domain=.otus.ru, sessionid=y2katgy462zufu64b69euxaj6avo459z; expires=вс, 13 нояб. 2022 04:25:36 MSK; path=/; domain=otus.ru; sameSite=Lax, _ym_d=1660569938; expires=вт, 15 авг. 2023 04:25:38 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, oid=cf4d05771eea3b63822e9d641e99a8be; expires=вт, 19 сент. 2023 04:25:36 MSK; path=/; domain=.otus.ru, _tt_enable_cookie=1; expires=сб, 09 сент. 2023 04:25:38 MSK; path=/; domain=.otus.ru, _ym_visorc=w; expires=пн, 15 авг. 2022 04:55:38 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _gid=GA1.2.1178445140.1660569938; expires=вт, 16 авг. 2022 04:25:38 MSK; path=/; domain=.otus.ru, utm=utm_source%3Dtypein%26utm_medium%3Ddirect%26utm_campaign%3DNone; expires=вт, 19 сент. 2023 04:25:36 MSK; path=/; domain=.otus.ru, _ym_uid=1660569938379776725; expires=вт, 15 авг. 2023 04:25:38 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _ym_isad=2; expires=вт, 16 авг. 2022 12:25:39 MSK; path=/; domain=.otus.ru;secure;; sameSite=None, _gat=1; expires=пн, 15 авг. 2022 04:26:38 MSK; path=/; domain=.otus.ru, _ga=GA1.2.1910083628.1660569938; expires=вт, 19 сент. 2023 04:25:38 MSK; path=/; domain=.otus.ru, _ttp=32cb6fbc-5c53-4075-a574-1cd8fa309dcd; expires=сб, 09 сент. 2023 04:25:38 MSK; path=/; domain=.otus.ru, advcake_session_id=bdb73e1c-8e8d-6c7f-64cb-26bbd6fe4558; expires=ср, 14 сент. 2022 04:25:38 MSK; path=/; domain=.otus.ru]
+2022-08-15 16:25:40,682 TRACE i.n.h.c.h.w.WebSocket08FrameEncoder [AsyncHttpClient-1-10] Encoding WebSocket Frame opCode=8 length=26

@@ -19,10 +19,6 @@ public class WebDriverInit {
     public WebDriver driver;
    public Logger logger;
 
-
-    //ИНИЦИАЛИЗАЦИЯ БРАУЗЕРА
-
-    //СТАРТОВЫЕ ПАРАМЕТРЫ БРАУЗЕРА
     public void waiting(){
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
