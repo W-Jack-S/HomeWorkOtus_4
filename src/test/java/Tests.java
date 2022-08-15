@@ -16,7 +16,7 @@ public class Tests extends WebDriverInit{
     @Test
     public void test1(){
         //Открыть Chrome в headless режиме
-        chrome("headless");
+        chrome("--headless");
         //Перейти на https://duckduckgo.com/
         driver.get("https://duckduckgo.com/");
         //В поисковую строку ввести "ОТУС"

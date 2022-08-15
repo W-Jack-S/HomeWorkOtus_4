@@ -13,7 +13,6 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
 
 import java.util.concurrent.TimeUnit;
-import java.util.logging.LogManager;
 
 public class WebDriverInit {
     public WebDriver driver;
@@ -28,7 +27,7 @@ public class WebDriverInit {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments(arg);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         waiting();
     }
      public void chrome(){
@@ -42,7 +41,7 @@ public class WebDriverInit {
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments(arg);
-        driver = new FirefoxDriver();
+        driver = new FirefoxDriver(options);
         waiting();
     }
 
@@ -57,7 +56,7 @@ public class WebDriverInit {
         WebDriverManager.operadriver().setup();
         OperaOptions options = new OperaOptions();
         options.addArguments(arg);
-        driver = new OperaDriver();
+        driver = new OperaDriver(options);
         waiting();
     }
 
@@ -72,7 +71,7 @@ public class WebDriverInit {
         WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions();
         options.addArguments(arg);
-        driver = new EdgeDriver();
+        driver = new EdgeDriver(options);
         waiting();
     }
 
