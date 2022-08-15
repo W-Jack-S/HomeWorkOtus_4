@@ -42,7 +42,6 @@ public class Test_1 extends WebDriverInit{
     public void test2() throws InterruptedException {
         //Открыть Chrome...
         chrome();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //Перейти на https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818
         driver.get("https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818");
         //...в режиме киоска
@@ -74,10 +73,16 @@ public class Test_1 extends WebDriverInit{
     }
 
     @Test
-    public void test3(){
+    public void test3() throws InterruptedException {
         chrome();
         driver.manage().window().maximize();
         driver.get("https://otus.ru");
+        driver.findElement(xpath("//button")).click();
+        Thread.sleep(5000);
+        driver.findElement(xpath("//input[@name='email']"));
+        driver.findElement(xpath("//input[@name='email']")).sendKeys("test10.jack@yandex.ru");
+        //driver.findElement(xpath("//input[@type='password']")).sendKeys("Qwerty1234$");
+    //    logger.info();
     }
 
     //@AfterEach

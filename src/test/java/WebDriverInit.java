@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -12,16 +13,17 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.LogManager;
 
 public class WebDriverInit {
     public WebDriver driver;
+   // public org.apache.logging.log4j.Logger logger = LogManager.getLogger(Logger.class);
 
 
     //ИНИЦИАЛИЗАЦИЯ БРАУЗЕРА
 
     //СТАРТОВЫЕ ПАРАМЕТРЫ БРАУЗЕРА
-    public void startSetting(){
-        driver.manage().window().maximize();
+    public void waiting(){
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
@@ -31,10 +33,12 @@ public class WebDriverInit {
         ChromeOptions options = new ChromeOptions();
         options.addArguments(arg);
         driver = new ChromeDriver();
+        waiting();
     }
     public void chrome(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        waiting();
     }
 
     //ЗАПУСК MOZILLA FIREFOX
@@ -43,11 +47,13 @@ public class WebDriverInit {
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments(arg);
         driver = new FirefoxDriver();
+        waiting();
     }
 
     public void fireFox(){
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
+        waiting();
     }
 
     //ЗАПУСК БРАУЗЕРА OPERA
@@ -56,11 +62,13 @@ public class WebDriverInit {
         OperaOptions options = new OperaOptions();
         options.addArguments(arg);
         driver = new OperaDriver();
+        waiting();
     }
 
     public void opera(){
         WebDriverManager.operadriver().setup();
         driver = new OperaDriver();
+        waiting();
     }
 
     //ЗАПУСК БРАУЗЕРА EDGE
@@ -69,11 +77,13 @@ public class WebDriverInit {
         EdgeOptions options = new EdgeOptions();
         options.addArguments(arg);
         driver = new EdgeDriver();
+        waiting();
     }
 
     public void edge(){
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
+        waiting();
     }
 
     public boolean checkElement(By element){
