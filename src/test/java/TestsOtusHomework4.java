@@ -26,7 +26,7 @@ public class TestsOtusHomework4 {
     public void test1SearchOtus() {
         //Открыть Chrome в headless режиме
         //driver = WebDriverFactory.getDriverWithOption("--headless");
-        driver = WebDriverFactory.getDriver();
+        driver = WebDriverFactory.getDriverWithOption();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //Перейти на https://duckduckgo.com/
         driver.get("https://duckduckgo.com/");

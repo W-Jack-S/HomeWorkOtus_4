@@ -15,6 +15,7 @@
         <webdrivermansger.version>5.2.3</webdrivermansger.version>
         <junit.version>5.9.0</junit.version>
         <browser>chrome</browser>
+
     </properties>
 
     <dependencies>

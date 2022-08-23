@@ -41,9 +41,10 @@ public class WebDriverFactory {
         }
         return new ChromeDriver();
     }
-    public static WebDriver getDriverWithOption(String arg){
+    public static WebDriver getDriverWithOption(){
 
         browser = System.getProperty("browser");
+        String arg = System.getProperty("options");
 
         if (browser == null) {
             WebDriverManager.chromedriver().setup();
@@ -54,9 +55,9 @@ public class WebDriverFactory {
 
         switch (browser.toLowerCase(Locale.ROOT).trim()){
             case "chrome":
-                WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments(arg);
+                WebDriverManager.chromedriver().setup();
                 return new ChromeDriver(options);
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -69,7 +70,6 @@ public class WebDriverFactory {
                 options2.addArguments(arg);
                 return new OperaDriver(options2);
             case "edge":
-                WebDriverManager.edgedriver().setup();
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions options3 = new EdgeOptions();
                 options3.addArguments(arg);
